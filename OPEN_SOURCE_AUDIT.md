@@ -29,7 +29,7 @@ resolve from public package indexes.
 - A `detect-secrets` scan across all historical Git blobs reports zero
   findings.
 - Private repository URLs and machine-specific paths are absent from the
-  current publishable tree (a `/home/...` path in README.md was removed).
+  current publishable tree (an absolute machine-local path in README.md was removed).
 - No file approaches GitHub's 100 MiB hard limit; the largest tracked file
   (`uv.lock`) is under 120 KiB.
 - The PyInstaller standalone build with the vendored protocol is verified in
