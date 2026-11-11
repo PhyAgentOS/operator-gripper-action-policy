@@ -23,7 +23,7 @@ jobs:
       - name: Unit tests
         run: uv run pytest -q
       - name: Verify CLI
-        run: uv run forge-relative-motion-policy --help
+        run: uv run gripper-action-policy --help
       - name: Import Forge packages
         run: PYTHONPATH=src uv run python -c "import forge_msgs, forge_tool, gripper_action_policy_node"
       - name: Lint

@@ -4,7 +4,6 @@ import asyncio
 
 import pytest
 from forge_msgs import GripperCommandFeedback, GripperCommandResult
-
 from forge_tool import (
     ToolContext,
     ToolEndpointError,
@@ -12,6 +11,7 @@ from forge_tool import (
     ToolExecutionKey,
     ToolRequest,
 )
+
 from gripper_action_policy_node.action_endpoint import (
     DESCRIPTOR,
     GripperActionEndpoint,
