@@ -35,7 +35,7 @@ Gateway -> gripper_action_policy -> gripper_action_controller -> MuJoCo / robot 
 实现：[descriptor 与 Action 适配](src/gripper_action_policy_node/action_endpoint.py)、
 [Dora runner](src/gripper_action_policy_node/runner.py)。
 
-兼容性：当前依赖声明为 `dora-rs==0.4.1`、`forge-msgs==1.0.1`；以 [pyproject.toml](pyproject.toml) 与 [uv.lock](uv.lock) 为准。 Tool 协议实现为仓库内 vendored 代码。 这些声明不构成跨版本互操作保证；使用制品时还需核对 build revision 和 Skill lock。
+兼容性：当前依赖声明为 `dora-rs>=1.0.1,<2`、`forge-msgs>=2.0.0,<3`；以 [pyproject.toml](pyproject.toml) 与 [uv.lock](uv.lock) 为准。 Tool 协议实现来自正式 `forge-tool[dora]` 分发包。 这些声明不构成跨版本互操作保证；使用制品时还需核对 build revision 和 Skill lock。
 
 后续修改 Node 入口、Endpoint 或 Tool API 时，请同步更新本节及对应配置/契约，遵循 [Node README 规范](https://github.com/PhyAgentOS/forge/blob/master/CONTRIBUTING.md#node-readme-contract)。
 
@@ -50,7 +50,7 @@ Gateway -> gripper_action_policy -> gripper_action_controller -> MuJoCo / robot 
 
 ## 安装与运行
 
-Forge 消息从公共包索引解析（`forge-msgs==1.0.1`）；Forge Tool 协议以 `src/forge_tool` 内置（vendored）：
+Forge 消息从公共包索引解析（`forge-msgs>=2.0.0,<3`）；Forge Tool 协议使用正式 `forge-tool[dora]>=2.0.0,<3` 分发包：
 
 ```bash
 uv sync
@@ -98,3 +98,9 @@ uv run ruff check .
 ## 许可证
 
 本仓库使用 Apache-2.0，详见 [LICENSE](LICENSE) 与 [NOTICE](NOTICE)。
+
+## Forge 2.x 迁移
+
+本分支准备节点版本 `2.0.0`，适配 Dora 1.x，迁移验证锁定 Dora `1.0.1`。使用正式 Forge 2.x 分发包；Common 至少为 `2.1.0`。此次更新包括依赖锁文件与各独立可执行入口。
+
+每轮报告必须列出仓库、改动和测试证据，包括各节点的 `dora run` 记录，以及包含 `adapter-forge-gateway` 的串联测试。缺少硬件或模型的验收项保持待验证。源码 PR 不等于正式发布；整体验收通过后再同步 GitLab。

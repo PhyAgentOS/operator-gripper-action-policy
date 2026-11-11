@@ -1,4 +1,4 @@
-# Release build workflow: deterministic Ubuntu 20.04 PyInstaller artifact (v0.1.0).
+# Release build workflow: deterministic Ubuntu 20.04 PyInstaller artifact (v2.0.0).
 name: Build Ubuntu 20.04 binaries
 
 # Triggered manually for binary releases; see OPEN_SOURCE_AUDIT.md.
@@ -9,11 +9,11 @@ on:
       ref:
         description: Git ref to build
         required: true
-        default: v0.1.0
+        default: v2.0.0
       version:
         description: Release version without the v prefix
         required: true
-        default: 0.1.0
+        default: 2.0.0
 
 permissions:
   contents: read
