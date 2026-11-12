@@ -1,0 +1,15 @@
+target: DEBUG    building node
+16:08:44 DEBUG  target: daemon::spawner spawning node
+
+16:08:44 INFO   [dora]: dora daemon finished building nodes, spawning...
+
+16:08:44 INFO   target: spawner spawning `${WORKSPACE}/operator-gripper-action-policy/.venv/bin/gripper-action-policy` in `${WORKSPACE}/validation/downstream-msgs210-20261112/runtime/gripper-action-policy/single`
+16:08:44 DEBUG  target: spawner spawned node with pid 77881
+16:08:44 INFO   target: daemon node is ready
+16:08:44 INFO   [dora]: daemon all nodes are ready, starting dataflow
+2026-11-12T08:08:50.095791Z  INFO dora_daemon: stop-after timeout reached (6s) -> stopping dataflow
+2026-11-12T08:08:50.096430Z  INFO run_inner: dora_daemon: stopping after 6s as requested health_check_interval_duration=None self.daemon_id=DaemonId { machine_id: None, uuid: 01a1cecd-4f39-79d3-b5fd-b06d57266f81 }
+16:08:50 DEBUG  target: daemon handling node stop with exit status Success (restart: false, restart_count: 0)
+16:08:50 INFO   target: daemon target finished successfully
+16:08:50 INFO   [dora]: daemon dataflow finished on machine `01a1cecd-4f39-79d3-b5fd-b06d57266f81`
+2026-11-12T08:08:50.165233Z  INFO run_inner: dora_daemon: exiting daemon because all required dataflows are finished health_check_interval_duration=None self.daemon_id=DaemonId { machine_id: None, uuid: 01a1cecd-4f39-79d3-b5fd-b06d57266f81 }
