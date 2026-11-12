@@ -1,7 +1,6 @@
 from __future__ import annotations
 
-from forge_msgs import GripperCommandFeedback, GripperCommandGoal, GripperCommandResult
-
+from forge_msgs import GripperCommandFeedback, GripperCommandGoal, GripperCommandResult, ToolMessage
 from forge_tool import (
     ToolContext,
     ToolExecutionKey,
@@ -9,8 +8,8 @@ from forge_tool import (
     invoke_response_from_payload,
     make_invoke_request_envelope,
 )
-from forge_tool._tool_message import ToolMessage
 from forge_tool.dora import tool_envelope_to_message, tool_message_to_envelope
+
 from gripper_action_policy_node.runner import GripperActionPolicyRunner
 
 

@@ -13,7 +13,6 @@ from dataclasses import dataclass
 from typing import Any
 
 from forge_msgs import GripperCommandFeedback, GripperCommandGoal, GripperCommandResult
-
 from forge_tool import (
     TOOL_ENDPOINT_PROTOCOL,
     ToolAccepted,

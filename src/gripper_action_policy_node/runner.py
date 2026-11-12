@@ -10,10 +10,8 @@ from collections.abc import Callable, Iterable
 from typing import Any
 
 import pyarrow as pa
-from forge_msgs import GripperCommandFeedback, GripperCommandGoal, GripperCommandResult
-
+from forge_msgs import GripperCommandFeedback, GripperCommandGoal, GripperCommandResult, ToolMessage
 from forge_tool import ToolEndpointHandler, ToolEnvelope
-from forge_tool._tool_message import ToolMessage
 from forge_tool.dora import (
     DoraToolEndpointBinding,
     tool_envelope_to_message,
