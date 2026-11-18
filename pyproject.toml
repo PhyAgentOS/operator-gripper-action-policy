@@ -1,6 +1,6 @@
 [project]
 name = "gripper-action-policy-node"
-version = "0.1.0"
+version = "1.0.0"
 description = "Standalone Forge Action policy node for a gripper controller."
 readme = "README.md"
 requires-python = ">=3.12"
