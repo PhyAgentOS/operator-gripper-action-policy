@@ -15,16 +15,15 @@
     "artifacts": [
       {
         "name": "gripper_action_policy_node-1.0.0-py3-none-any.whl",
-        "size": 12023,
-        "sha256": "31eaddf3cb1e833af971a31a4b325388e2e73891cf72a72792ca9b0691a26385"
+        "size": 12023
       },
       {
         "name": "gripper_action_policy_node-1.0.0.tar.gz",
-        "size": 9327,
-        "sha256": "85a07e9f65ce0f5f7eead66f95f15d82f4c9c6e97076d519b0ada5db8d2706db"
+        "size": 9327
       }
     ]
   },
+  "source_profile_scope": "Local candidate worktrees; proposed maintenance changes are not deployed or merged yet. Full checksums and raw logs remain in the local workspace.",
   "source_profiles": [
     {
       "repo": "PhyAgentOS/operator-gripper-action-policy",
